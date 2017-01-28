@@ -12,7 +12,9 @@ const Skinny        = require('devpunx-skinny').builder
 const skinnyRouter  = require('devpunx-skinny').router
 
 var myWebsite = new Skinny({
-  file: path.join(__dirname, '/website')
+  file: path.join(__dirname, 'website'),
+  tmplDir: path.join(__dirname, 'views'),
+  tmplExt: '.pug'
 });
 
 myWebsite.init()
