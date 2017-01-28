@@ -79,7 +79,7 @@ module.exports = {
                     article: 'Bla Bla!'
                 }
             },
-            mobileReady: {
+            'mobile-ready': {
                 meta: {
                     title: 'Our Devpunx Product | the X makes the difference',
                     description: 'This is some description',
@@ -89,6 +89,36 @@ module.exports = {
                 content: {
                     h1: 'Mobile Ready!',
                     article: 'Bla Bla!'
+                },
+                products: {
+                    meta: {
+                        title: 'Products',
+                        alias: 'Products',
+                        template: 'subpage'
+                    },
+                    content: {
+                        h1: 'My other Page',
+                        article: 'welcome on this site',
+                        foo: 'lorem ipsum...'
+                    },
+                    'assorted-candy': {
+                        meta: {
+                            title: 'Assorted Candy',
+                            alias: 'Assorted Candy',
+                            template: 'subpage'
+                        },
+                        content: {},
+                    },
+                    gummybears: {
+                        meta: {
+                            title: 'Gummy Bears',
+                            alias: 'Gummy Bears',
+                            template: 'subpage'
+                        },
+                        content: {
+                            h1: 'Gummy Bears'
+                        },
+                    }
                 }
             }
         }
