@@ -1,0 +1,25 @@
+nav.js-menu.sliding-panel-content
+    ul.level-1
+        each first in nav.menu
+            li
+                a(href=first.href class=first.status)= first.name
+                if (Object.keys(first.sub).length > 0)
+                    ul.level-2
+                        each second in first.sub
+                            li
+                                a(href=second.href  class=second.status)= second.name
+                                if (Object.keys(second.sub).length > 0)
+                                    ul.level-3
+                                        each third in second.sub
+                                            li
+                                                a(href=third.href  class=third.status)= third.name
+                                                if (Object.keys(third.sub).length > 0)
+                                                    ul.level-4
+                                                        each fourth in third.sub
+                                                            li
+                                                                a(href=fourth.href  class=fourth.status)= fourth.name
+                                                                if (Object.keys(fourth.sub).length > 0)
+                                                                    ul.level-4
+                                                                        each fifth in fourth.sub
+                                                                            li
+                                                                                a(href=fifth.href  class=fifth.status)= fifth.name
