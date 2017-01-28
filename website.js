@@ -107,7 +107,9 @@ module.exports = {
                             alias: 'Assorted Candy',
                             template: 'subpage'
                         },
-                        content: {},
+                        content: {
+                            h1: 'Assorted Candy',
+                        },
                     },
                     gummybears: {
                         meta: {
