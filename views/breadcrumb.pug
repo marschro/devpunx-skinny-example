@@ -1,0 +1,7 @@
+if (nav.breadcrumbs.length > 0)
+    div.breadcrumbs
+        each item in nav.breadcrumbs
+            if (item.current)
+                a(href="javascript:void(0)")= item.name
+            else
+                a(href=item.href)= item.name
