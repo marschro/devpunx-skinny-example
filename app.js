@@ -13,7 +13,7 @@ const skinnyRouter  = require('devpunx-skinny').router
 
 var myWebsite = new Skinny({
   file: path.join(__dirname, 'website'),
-  tmplDir: path.join(__dirname, 'views'),
+  tmplDir: path.join(__dirname, 'templates'),
   tmplExt: '.pug'
 });
 
@@ -22,7 +22,7 @@ myWebsite.init()
 var app = express()
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'templates'))
 app.set('view engine', 'pug')
 app.set('port', 3000)
 
@@ -50,7 +50,7 @@ function onError(error) {
 function onListening() {
   let addr = server.address()
   let port = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port
-  console.log(`\n==> Service is up and running on ${port}`)
+    ? addr
+    : addr.port
+  console.log(`\n==> Service is up and running on http://localhost:${port}`)
 }
